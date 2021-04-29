@@ -13,3 +13,14 @@ The Challenge:
 Your code must return true or false depending upon whether the given number is a Narcissistic number in base 10.
 
 Error checking for text strings or other invalid inputs is not required, only valid positive non-zero integers will be passed into the function.
+
+
+Numbers for test cases below 
+
+7, True, '7 is narcissistic'
+
+371, True, '371 is narcissistic'
+
+122, False, '122 is not narcissistic'
+
+4887, False, '4887 is not narcissistic'
