@@ -24,3 +24,6 @@ Numbers for test cases below
 122, False, '122 is not narcissistic'
 
 4887, False, '4887 is not narcissistic'
+
+
+Solve this problem on Codewars here https://www.codewars.com/kata/56b22765e1007b79f2000079
