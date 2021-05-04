@@ -16,7 +16,7 @@ Error checking for text strings or other invalid inputs is not required, only va
 
 
 Numbers for test cases below 
-
+```
 7, True, '7 is narcissistic'
 
 371, True, '371 is narcissistic'
@@ -24,6 +24,6 @@ Numbers for test cases below
 122, False, '122 is not narcissistic'
 
 4887, False, '4887 is not narcissistic'
-
+```
 
 Solve this problem on Codewars here https://www.codewars.com/kata/56b22765e1007b79f2000079
