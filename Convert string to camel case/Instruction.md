@@ -4,3 +4,6 @@ Complete the method/function so that it converts dash/underscore delimited words
 
     "the-stealth-warrior" gets converted to "theStealthWarrior"
     "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+
+
+Solve this problem on Codewars here https://www.codewars.com/kata/517abf86da9663f1d2000003
