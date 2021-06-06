@@ -1,36 +1,35 @@
 #include<stdio.h>
-
-int main(){
-    int id[7], total=0;
-
-    for (int i=0; i<7; i++)
+void reversearray(int *p, int n)
+{
+    int *first = p;
+    int *last = p+n-1;
+    while(first<last)
     {
-        printf("element - %d:",i);
-        scanf("%d", &id[i]);
+        int temp = *first;
+        *first = *last;
+        *last = temp;
+        first++;
+        last--;
     }
+    printf("After reversing the array: \n");
+    for(int i=0; i<n; i++)
+        printf("Elements %d = %d \n",i+1, *p++);
+}
+int main()
+{
+    int size;
+    printf("Enter Array size:");
+    scanf("%d", &size);
+    int a[size];
+    printf("Enter Array Elements:\n");
+    for(int i=0; i<size; i++)
+        scanf("%d", &a[i]);
 
-    printf("\nThe unique elements found in student ID are:\n");
+    printf("Before reversing the array:\n");
 
-    for (int i=0; i<7; i++)
-    {
-        int crt = 0;
-        for (int j=0; j<7+1; j++)
-        {
-            if (i!=j)
-            {
-                if(id[i]==id[j])
-                {
-                    crt++;
-                }
-            }
-        }
-        if(crt==0)
-        {
-            printf("%d ", id[i]);
-            total++;
-        }
-    }
-    printf("\nTotal number of unique elements are:\n");
+    for(int i=0; i<size; i++)
+        printf("Element %d = %d\n",i+1, a[i]);
 
-    printf("%d ", total);
+    reversearray(a, size);
+    return 0;
 }
