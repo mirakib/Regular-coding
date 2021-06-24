@@ -1,35 +1,28 @@
-#include<stdio.h>
-void reversearray(int *p, int n)
-{
-    int *first = p;
-    int *last = p+n-1;
-    while(first<last)
-    {
-        int temp = *first;
-        *first = *last;
-        *last = temp;
-        first++;
-        last--;
-    }
-    printf("After reversing the array: \n");
-    for(int i=0; i<n; i++)
-        printf("Elements %d = %d \n",i+1, *p++);
-}
+#include <stdio.h>
+#include <stdlib.h>
+
 int main()
 {
-    int size;
-    printf("Enter Array size:");
-    scanf("%d", &size);
-    int a[size];
-    printf("Enter Array Elements:\n");
-    for(int i=0; i<size; i++)
-        scanf("%d", &a[i]);
+    FILE *numbers, *summation, *average;
 
-    printf("Before reversing the array:\n");
+    numbers = fopen("C:\\Users\\Rakib\\Documents\\Numbers.txt","w");
 
-    for(int i=0; i<size; i++)
-        printf("Element %d = %d\n",i+1, a[i]);
+    int id, sum;
+    printf("Your id:");
+    scanf("%d", &id);
 
-    reversearray(a, size);
-    return 0;
+    for(int i=1; i<=id; i++)
+    {
+        fprintf(numbers, "%d\n", i);
+        sum += i;
+    }
+    fclose(numbers);
+
+    summation = fopen("C:\\Users\\Rakib\\Documents\\Summation.txt","w");
+    fprintf(summation, "%d", sum);
+    fclose(summation);
+
+    average = fopen("C:\\Users\\Rakib\\Documents\\Average.txt","w");
+    fprintf(average, "%d", sum / id);
+    fclose(average);
 }
